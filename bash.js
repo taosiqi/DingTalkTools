@@ -109,5 +109,7 @@ const getOvertimeDuration = async () => {
 };
 
 getOvertimeDuration().then((r) => {
-  console.log("今年加班共计" + r + "分钟,约" + Math.ceil(r / 60) + "小时");
+  let h=Math.ceil(r / 60)
+  let d=Math.ceil(h / 8)
+  console.log(`今年加班共计${r}分钟,约${h}小时,${d}个工作日`);
 });
